@@ -1,0 +1,22 @@
+Gitgub page only for STATIC PAGE
+
+in VS-CODE
+first check, project is working on live server.
+add 'CNAME' file in project directory
+add url in CNAME file  example : resume.samrat.online
+git add .
+git commit - "ADD CNAME"
+git push
+
+NOW open your domain DNS and add CNAME record as follows :-
+Type: CNAME
+Name: resume (subdomain)
+Target: samratsauravjaiswal.github.io (github page url)
+TTL: Auto
+save
+
+NOW open github.com and open your repository setting tab 
+scroll down to github page section
+select Master branch (as Source)
+save changes
+done
