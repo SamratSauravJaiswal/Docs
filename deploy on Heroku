@@ -6,7 +6,6 @@ in vs code
   git add .
   git commit -m "add Procfile"
   git push
-  git push heroku master
 
 type cmd in integrated terminal
  heroku login (
