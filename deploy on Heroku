@@ -1,6 +1,6 @@
 in vs code 
   check project is working on local host perfectly
-  add 'rocess.env.PORT' n app.listen
+  add 'process.env.PORT' in app.listen
   add Procfile in project directory
   in Pocfile add 'web: node app.js' <replace app.js with main js file>
   git add .
