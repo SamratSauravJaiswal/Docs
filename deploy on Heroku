@@ -7,8 +7,8 @@ in vs code
   git commit -m "add Procfile"
   git push
 
-type cmd in integrated terminal
- heroku login (
+type in integrated terminal
+ heroku login
  heroku create
  git push heroku master
  heroku config:set <ENVIRONMENT_VARIABLE=VALUE>
