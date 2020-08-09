@@ -3,6 +3,12 @@ in vs code
   add 'process.env.PORT' in app.listen
   add Procfile in project directory
   in Pocfile add 'web: node app.js' <replace app.js with main js file>
+  in package.json add
+    "engines": {
+    "node": "12.x"
+  }
+  
+  
   git add .
   git commit -m "add Procfile"
   git push
