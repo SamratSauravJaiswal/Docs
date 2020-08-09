@@ -1,13 +1,33 @@
+NOTE : do check file andfolder in command
 in vs code 
-  check project is working on local host perfectly
-  add 'process.env.PORT' in app.listen
-  add Procfile in project directory
+  #check project is working on local host perfectly
+  
+  #changes in entry file (app.js)
+    
+    install path module
+    add--> const path = require('path');
+    add--> before app.listen
+  
+    if (process.env.NODE_ENV === 'production') {
+	    app.use(express.static('client/build'));
+	    app.get('*', (req, res) => {
+		    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	    });
+    }   
+  
+    add--> const port = process.env.PORT || 4000; #for app.listen
+    
+  # add heroku postbuil command in package.json 	"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  
+  
+  # add Procfile in project directory
   in Pocfile add 'web: node app.js' <replace app.js with main js file>
   git add .
   git commit -m "add Procfile"
   git push
-import path in backend
+  
 type in integrated terminal
+ # install heroku cli
  heroku login
  heroku create
  git push heroku master
