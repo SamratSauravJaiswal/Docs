@@ -3,7 +3,8 @@ month = (dt.getMonth() + 1).toString().padStart(2, "0");
 date = dt.getDate().toString().padStart(2, "0");
 year = dt.getFullYear().toString().padStart(4, "0");
 
-hour = dt.getHours().toString().padStart(2, "0");
+hour = dt.getHours().toString().padStart(2, "0"); //24 format
+hour = dt.getHours() % 12 || 12; //12 format
 
 minute = dt.getMinutes().toString().padStart(2, "0");
 
